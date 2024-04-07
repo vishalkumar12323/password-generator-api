@@ -1,12 +1,12 @@
-import express from "express"
+import express from "express";
 
 const app = express();
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-    res.json({message: "hello password generate app"})
+  res.json(req.url);
 });
 
 app.listen(port, () => {
-    console.log(`server started on port:${port}`);
+  console.log(`server start at http://localhost:${port}`);
 });
